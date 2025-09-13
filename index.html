@@ -134,7 +134,8 @@
 
         .form-group input[type="text"],
         .form-group input[type="email"],
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 16px;
             border: 2px solid var(--border-color);
@@ -149,7 +150,8 @@
 
         .form-group input[type="text"]:focus,
         .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 4px rgb(99 102 241 / 0.1);
@@ -452,17 +454,27 @@
         <form id="satisfactionForm">
             <div class="form-group">
                 <label for="name"><strong>Full Name:</strong></label>
-                <input type="text" id="name" name="name" placeholder="Ex. John Doe" required autocomplete="name">
+                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
             </div>
 
             <div class="form-group">
                 <label for="roomNumber"><strong>Room Number:</strong></label>
-                <input type="text" id="roomNumber" name="roomNumber" placeholder="Ex. 1234" required autocomplete="off">
+                <input type="text" id="roomNumber" name="roomNumber" placeholder="Ex. 3467" required autocomplete="off">
             </div>
 
             <div class="form-group">
                 <label for="service"><strong>Spa Service:</strong></label>
-                <input type="text" id="service" name="service" placeholder="Ex. Swedish Massage" required autocomplete="off">
+                <select id="service" name="service" required>
+                    <option value="">Select a service...</option>
+                    <option value="Spa Delights">Spa Delights</option>
+                    <option value="Facial Experiences">Facial Experiences</option>
+                    <option value="Body Experience">Body Experience</option>
+                    <option value="Massage Therapy">Massage Therapy</option>
+                    <option value="Hand & Feet">Hand & Feet</option>
+                    <option value="Hair & Makeup">Hair & Makeup</option>
+                    <option value="Waxing">Waxing</option>
+                    <option value="Hydrotherapy">Hydrotherapy</option>
+                </select>
             </div>
 
             <div class="form-group">
