@@ -516,6 +516,28 @@
             </div>
 
             <div class="form-group">
+                <label><strong>How would you rate the service quality?</strong></label>
+                <div class="rating-faces" data-question="service_quality">
+                    <input type="radio" id="service-quality-5" name="service_quality" value="Excellent" required><label for="service-quality-5"><span class="face-icon">😄</span><small>Excellent</small></label>
+                    <input type="radio" id="service-quality-4" name="service_quality" value="Good"><label for="service-quality-4"><span class="face-icon">🙂</span><small>Good</small></label>
+                    <input type="radio" id="service-quality-3" name="service_quality" value="Regular"><label for="service-quality-3"><span class="face-icon">😐</span><small>Regular</small></label>
+                    <input type="radio" id="service-quality-2" name="service_quality" value="Poor"><label for="service-quality-2"><span class="face-icon">🙁</span><small>Poor</small></label>
+                    <input type="radio" id="service-quality-1" name="service_quality" value="Bad"><label for="service-quality-1"><span class="face-icon">😡</span><small>Bad</small></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><strong>How would you rate the staff friendliness?</strong></label>
+                <div class="rating-faces" data-question="staff_friendliness">
+                    <input type="radio" id="staff-friendliness-5" name="staff_friendliness" value="Excellent" required><label for="staff-friendliness-5"><span class="face-icon">😄</span><small>Excellent</small></label>
+                    <input type="radio" id="staff-friendliness-4" name="staff_friendliness" value="Good"><label for="staff-friendliness-4"><span class="face-icon">🙂</span><small>Good</small></label>
+                    <input type="radio" id="staff-friendliness-3" name="staff_friendliness" value="Regular"><label for="staff-friendliness-3"><span class="face-icon">😐</span><small>Regular</small></label>
+                    <input type="radio" id="staff-friendliness-2" name="staff_friendliness" value="Poor"><label for="staff-friendliness-2"><span class="face-icon">🙁</span><small>Poor</small></label>
+                    <input type="radio" id="staff-friendliness-1" name="staff_friendliness" value="Bad"><label for="staff-friendliness-1"><span class="face-icon">😡</span><small>Bad</small></label>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="suggestions"><strong>Suggestions and Comments:</strong></label>
                 <textarea id="suggestions" name="suggestions" rows="4" placeholder="Share your suggestions for improvement..."></textarea>
             </div>
@@ -602,6 +624,8 @@
                 therapist_rating: formData.get('therapist_rating') || '',
                 checking_process: formData.get('checking_process') || '',
                 spa_impressions: formData.get('spa_impressions') || '',
+                service_quality: formData.get('service_quality') || '',
+                staff_friendliness: formData.get('staff_friendliness') || '',
                 suggestions: formData.get('suggestions') ? formData.get('suggestions').trim() : '',
                 timestamp: new Date().toISOString()
             };
